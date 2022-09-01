@@ -1,42 +1,73 @@
-import { Navbar, Nav, Container, Button, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { NavStyled } from "../styles/NavStyles";
 
 export const NavBar = () => {
   return (
-    <Navbar expand="lg">
+    <NavStyled className="p-3" collapseOnSelect expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand className="pe-5" href="#">
+        <Navbar.Brand className="pe-lg-5 pe-0" href="#">
           <img
             src="/logo.png"
             alt="logotipo"
-            className="img-fluid w-75"
+            className="img-fluid"
           />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbarNavDropdown"
         />
         <Navbar.Collapse
-          className="container justify-content-end"
+          className="justify-content-end container"
           id="navbarNavDropdown"
         >
-          <Nav>
+          <Nav className="gap-2">
             <Nav.Item>
-              <Nav.Link aria-current="page" href="#">
+              <Nav.Link className="actived" href="#">
                 Inicio
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Button variant="dark">
+              <Nav.Link href="#">
+                Panela
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#">
+                Sustentabilidad
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#">
+                Blog
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#">
+                FAQs
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#">
+                Sobre nosotros
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#">
+                Contacto
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <button>
                 <Nav.Link href="#">¡Cotizar ahora!</Nav.Link>
-              </Button>
+              </button>
             </Nav.Item>
             <NavDropdown title="ES">
-              <NavDropdown.Item href="#">
+              <NavDropdown.Item>
                 En
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </NavStyled>
   );
 };
