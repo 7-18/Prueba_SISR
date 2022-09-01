@@ -14,8 +14,8 @@ export const Products = () => {
             semper ultricies quam platea nunc iaculis luctus est mattis porta nulla
           </p>
         </SectionTitle>
-        <Container className="d-flex justify-content-center px-5">
-          <Row className="px-5">
+        <Container className="d-flex justify-content-center px-lg-5">
+          <Row className="px-lg-5">
             <Col sm={12} className="px-5">
               <ProductsCarousel
                 fade
