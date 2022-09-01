@@ -29,8 +29,8 @@ export const CarouselHome = () => {
               non.
             </p>
             <div className="d-inline-flex p-0 mt-3">
-              <ButtonStyled className="btn-1 pt-2 pb-2 ps-5 pe-5">Conoce producto</ButtonStyled>
-              <ButtonStyled className="btn-2 pt-2 pb-2 ps-5 pe-5 ms-3">
+              <ButtonStyled className="btn-1 py-2 px-5">Conoce producto</ButtonStyled>
+              <ButtonStyled className="btn-2 py-2 px-5 ms-3">
                 ¡Cotizar ahora!
               </ButtonStyled>
             </div>
@@ -53,8 +53,8 @@ export const CarouselHome = () => {
               non.
             </p>
             <div className="d-inline-flex p-0 mt-3">
-              <ButtonStyled className="btn-1 pt-2 pb-2 ps-5 pe-5">Conoce producto</ButtonStyled>
-              <ButtonStyled className="btn-2 pt-2 pb-2 ps-5 pe-5 ms-3">
+              <ButtonStyled className="btn-1 py-2 px-5">Conoce producto</ButtonStyled>
+              <ButtonStyled className="btn-2 py-2 px-5 ms-3">
                 ¡Cotizar ahora!
               </ButtonStyled>
             </div>
@@ -77,8 +77,8 @@ export const CarouselHome = () => {
               non.
             </p>
             <div className="d-inline-flex p-0 mt-3">
-              <ButtonStyled className="btn-1 pt-2 pb-2 ps-5 pe-5">Conoce producto</ButtonStyled>
-              <ButtonStyled className="btn-2 pt-2 pb-2 ps-5 pe-5 ms-3">
+              <ButtonStyled className="btn-1 py-2 px-5">Conoce producto</ButtonStyled>
+              <ButtonStyled className="btn-2 py-2 px-5 ms-3">
                 ¡Cotizar ahora!
               </ButtonStyled>
             </div>

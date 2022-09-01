@@ -42,7 +42,7 @@ export const Products = () => {
                             molestie viverra tempus ligula.
                           </div>
                           <div className="pt-3">
-                            <ButtonStyled className="btn-2 pt-2 pb-2 ps-5 pe-5">
+                            <ButtonStyled className="btn-2 py-2 px-5">
                               Ver producto
                             </ButtonStyled>
                           </div>
@@ -73,7 +73,7 @@ export const Products = () => {
                             molestie viverra tempus ligula.
                           </div>
                           <div className="pt-3">
-                            <ButtonStyled className="btn-2 pt-2 pb-2 ps-5 pe-5">
+                            <ButtonStyled className="btn-2 py-2 px-5">
                               Ver producto
                             </ButtonStyled>
                           </div>
