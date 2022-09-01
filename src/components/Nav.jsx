@@ -33,17 +33,17 @@ export const NavBar = ({ setLanguage, language }) => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#">
+              <Nav.Link href="#products">
                 {language === "ES" ? "Panela" : "Raw Cane Sugar"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#">
+              <Nav.Link href="#sustain">
                 {language === "ES" ? "Sostenibilidad" : "Sustainability"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#">
+              <Nav.Link href="#blog">
                 Blog
               </Nav.Link>
             </Nav.Item>
@@ -53,12 +53,12 @@ export const NavBar = ({ setLanguage, language }) => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#">
+              <Nav.Link href="#services">
                 {language === "ES" ? "Sobre nosotros" : "About Us"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#">
+              <Nav.Link href="#contact">
                 {language === "ES" ? "Contacto" : "Contact"}
               </Nav.Link>
             </Nav.Item>

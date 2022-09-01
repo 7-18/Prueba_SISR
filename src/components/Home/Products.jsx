@@ -4,7 +4,7 @@ import { ProductsCarousel, SectionTitle } from "../../styles/ProductsStyles"
 
 export const Products = ({ language }) => {
   return (
-    <section>
+    <section id="products">
       <div className="mt-5">
         <SectionTitle className="p-3 pb-md-4 mx-auto text-center">
           <h1 className="fs-2 fw-bold">{language === "ES" ? "Productos" : "Products"}</h1>

@@ -4,7 +4,7 @@ import { SustainDiv } from "../../styles/SustainStyles"
 
 export const Sustain = ({ language }) => {
   return (
-    <section>
+    <section id="sustain">
       <SustainDiv
         fluid
         className="d-inline-flex justify-content-center align-items-end text-center"

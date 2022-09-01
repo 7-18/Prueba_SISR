@@ -16,7 +16,7 @@ export const Subscription = ({ language }) => {
   }
 
   return (
-    <SectionSub>
+    <SectionSub id="contact">
       <Container
         fluid
         className="py-5"

@@ -4,7 +4,7 @@ import { DivServices } from "../../styles/ServicesStyles"
 
 export const Services = () => {
   return (
-    <section>
+    <section id="services">
       <DivServices className="mt-5">
         <SectionTitle className="p-3 pb-md-4 mx-auto text-center">
           <h1 className="display-2 fs-2 fw-bold mt-5">

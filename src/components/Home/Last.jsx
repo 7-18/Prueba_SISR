@@ -5,7 +5,7 @@ import { SectionTitle } from "../../styles/ProductsStyles"
 
 export const Last = ({ language }) => {
   return (
-    <section>
+    <section id="blog">
       <LastEntries className="mb-4 pb-4">
         <SectionTitle className="p-3 pb-md-4 mx-auto text-center">
           <h1 className="display-2 fs-2 fw-bold mt-5">
