@@ -63,7 +63,7 @@ export const Subscription = ({ language }) => {
                 </label>
               ) : (
                 <label className="form-check-label" htmlFor="flexCheckTerms">
-                  Accept <u>terms and conditions</u> and <u>pprivacy policy</u>
+                  Accept <u>terms and conditions</u> and <u>privacy policy</u>
                 </label>
               )
               }
