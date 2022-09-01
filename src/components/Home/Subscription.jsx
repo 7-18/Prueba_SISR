@@ -3,12 +3,16 @@ import { Col, Container, Row } from "react-bootstrap"
 import { ButtonStyled } from "../../styles/CarouselStyles"
 import { SectionSub, SubTitle } from "../../styles/SubscriptionStyles"
 
-export const Subscription = () => {
+export const Subscription = ({ language }) => {
   const [email, setEmail] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(`Gracias por suscribirte, ` + email)
+    if (language === "ES") {
+      alert(`Gracias por suscribirte, ` + email)
+    } else {
+      alert(`Thanks for subscribe, ` + email)
+    }
   }
 
   return (
@@ -20,7 +24,7 @@ export const Subscription = () => {
         <Row className="d-flex align-items-center justify-content-center">
           <Col sm={6}>
             <SubTitle className="display-3 fs-2 mt-5 pb-3">
-              Suscríbete a nuestro boletín
+              {language === "ES" ? "Suscríbete a nuestro boletín" : "Subscribe to our newsletter"}
             </SubTitle>
             <p className="fs-6 pb-3">
               Lorem ipsum dolor sit amet consectetur adipiscing elit erat rutrum
@@ -38,12 +42,12 @@ export const Subscription = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <ButtonStyled type="submit" className="btn-2 py-lg-2 px-lg-5 px-3 py-1 ms-3 d-inline-flex d-lg-none">
-                  Suscribirme
+                  {language === "ES" ? "Suscribirme" : "Subscribe"}
                 </ButtonStyled>
               </Col>
               <div>
                 <ButtonStyled type="submit" className="btn-2 py-lg-2 px-lg-5 px-3 py-1 d-none d-lg-block">
-                  Suscribirme
+                  {language === "ES" ? "Suscribirme" : "Subscribe"}
                 </ButtonStyled>
               </div>
             </form>
@@ -53,9 +57,16 @@ export const Subscription = () => {
                 type="checkbox"
                 id="flexCheckTerms"
               />
-              <label className="form-check-label" for="flexCheckTerms">
-                Aceptar <u>términos y condiciones</u> y <u>política de privacidad</u>
-              </label>
+              {language === "ES" ? (
+                <label className="form-check-label" htmlFor="flexCheckTerms">
+                  Aceptar <u>términos y condiciones</u> y <u>política de privacidad</u>
+                </label>
+              ) : (
+                <label className="form-check-label" htmlFor="flexCheckTerms">
+                  Accept <u>terms and conditions</u> and <u>pprivacy policy</u>
+                </label>
+              )
+              }
             </div>
           </Col>
           <Col sm={4}>

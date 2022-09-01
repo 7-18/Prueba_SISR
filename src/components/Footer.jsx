@@ -2,7 +2,7 @@ import { Container, Row } from "react-bootstrap"
 import { FooterStyled, SocialMedia } from "../styles/FooterStyles"
 import { Copyright } from "./Copyright"
 
-export const Footer = () => {
+export const Footer = ({ language }) => {
   return (
     <FooterStyled>
       <Container className="text-center pt-5">
@@ -13,28 +13,35 @@ export const Footer = () => {
             className="img-fluid"
           /></a>
         <Row className="justify-content-center pt-3 pb-3">
-          <ul>
-            <li><a href="#">Contáctanos</a></li>
-            <li><a href="#">Trabaja con nosotros</a></li>
-            <li><a href="#">Política de privacidad</a></li>
-            <li><a href="#"> Política de cookies</a></li>
-          </ul>
+          {language === "ES" ? (
+            <ul>
+              <li><a href="#">Contáctanos</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Política de cookies</a></li>
+            </ul>
+          ) : (
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Work With Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies Policy</a></li>
+            </ul>
+          )}
         </Row>
         <SocialMedia className="border-bottom pb-4 mb-3 d-flex gap-3 justify-content-center">
           <button>
             <img src="/assets/images/red3.svg" />
           </button>
-
           <button>
             <img src="/assets/images/red1.svg" />
           </button>
-
           <button>
             <img src="/assets/images/red2.svg" />
           </button>
         </SocialMedia>
       </Container>
-      <Copyright />
+      <Copyright language={language} />
     </FooterStyled>
   )
 }

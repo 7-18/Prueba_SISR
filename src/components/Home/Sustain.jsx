@@ -2,7 +2,7 @@ import { Card, Col, Row } from "react-bootstrap"
 import { ButtonStyled } from "../../styles/CarouselStyles"
 import { SustainDiv } from "../../styles/SustainStyles"
 
-export const Sustain = () => {
+export const Sustain = ({ language }) => {
   return (
     <section>
       <SustainDiv
@@ -16,13 +16,13 @@ export const Sustain = () => {
                 <img
                   src="/assets/images/740 2@2x.png"
                   className="img-fluid"
-                  alt="sugar-product1"
+                  alt="sustain"
                 />
               </Col>
               <Col sm={6}>
                 <Card.Body className="py-5">
                   <Card.Title className="fs-2 fw-bold pb-2">
-                    Sostenibilidad
+                    {language === "ES" ? "Sostenibilidad" : "Sustainability"}
                   </Card.Title>
                   <Card.Text className="text-center pe-1">
                     Vivamus accumsan potenti facilisis phasellus convallis pretium
@@ -31,7 +31,9 @@ export const Sustain = () => {
                     molestie viverra tempus ligula.
                   </Card.Text>
                   <Card.Text className="pt-3">
-                    <ButtonStyled className="btn-2 py-2 px-5">Ver más</ButtonStyled>
+                    <ButtonStyled className="btn-2 py-2 px-5">
+                      {language === "ES" ? "Ver más" : "See more"}
+                    </ButtonStyled>
                   </Card.Text>
                 </Card.Body>
               </Col>

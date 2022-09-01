@@ -3,17 +3,21 @@ import { ButtonStyled } from "../../styles/CarouselStyles"
 import { Category, LastEntries } from "../../styles/LastStyles"
 import { SectionTitle } from "../../styles/ProductsStyles"
 
-export const Last = () => {
+export const Last = ({ language }) => {
   return (
     <section>
       <LastEntries className="mb-4 pb-4">
         <SectionTitle className="p-3 pb-md-4 mx-auto text-center">
-          <h1 className="display-2 fs-2 fw-bold mt-5">Últimas entradas</h1>
+          <h1 className="display-2 fs-2 fw-bold mt-5">
+            {language === "ES" ? "Últimas entradas" : "Last entries"}
+          </h1>
         </SectionTitle>
         <Container className="card-group text-start">
           <Card className="pt-4 me-3 mt-3 mt-lg-0">
             <div>
-              <Category>Categoría</Category>
+              <Category>
+                {language === "ES" ? "Categoría" : "Category"}
+              </Category>
               <img
                 src="/assets/images/309883-P85E04-647.png"
                 className="card-img-top w-100"
@@ -31,7 +35,9 @@ export const Last = () => {
                 non.
               </Card.Text>
               <Card.Text className="pt-3 text-center text-lg-start">
-                <ButtonStyled className="btn-2 py-2 px-5">Ver más</ButtonStyled>
+                <ButtonStyled className="btn-2 py-2 px-5">
+                  {language === "ES" ? "Ver más" : "See more"}
+                </ButtonStyled>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -43,7 +49,9 @@ export const Last = () => {
                 alt="old-man"
               />
             </div>
-            <Category>Categoría</Category>
+            <Category>
+              {language === "ES" ? "Categoría" : "Category"}
+            </Category>
             <Card.Body className="pt-4 ps-4">
               <small>04-12-2020</small>
               <h1 className="fs-4 fw-bold">
@@ -55,13 +63,17 @@ export const Last = () => {
                 non.
               </Card.Text>
               <Card.Text className="pt-3 text-center text-lg-start">
-                <ButtonStyled className="btn-2 py-2 px-5">Ver más</ButtonStyled>
+                <ButtonStyled className="btn-2 py-2 px-5">
+                  {language === "ES" ? "Ver más" : "See more"}
+                </ButtonStyled>
               </Card.Text>
             </Card.Body>
           </Card>
           <Card className="pt-4 me-3 mt-3 mt-lg-0">
             <div>
-              <Category>Categoría</Category>
+              <Category>
+                {language === "ES" ? "Categoría" : "Category"}
+              </Category>
               <img
                 src="/assets/images/552644-PK35XI-923.png"
                 className="card-img-top w-100"
@@ -79,7 +91,9 @@ export const Last = () => {
                 non.
               </Card.Text>
               <Card.Text className="pt-3 text-center text-lg-start">
-                <ButtonStyled className="btn-2 py-2 px-5">Ver más</ButtonStyled>
+                <ButtonStyled className="btn-2 py-2 px-5">
+                  {language === "ES" ? "Ver más" : "See more"}
+                </ButtonStyled>
               </Card.Text>
             </Card.Body>
           </Card>

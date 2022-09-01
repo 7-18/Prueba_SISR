@@ -1,7 +1,14 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { NavStyled } from "../styles/NavStyles";
 
-export const NavBar = () => {
+export const NavBar = ({ setLanguage, language }) => {
+  const my_language = localStorage.getItem('language')
+
+  const changeLanguage = (lan) => {
+    setLanguage(lan)
+    return localStorage.setItem('language', language)
+  }
+
   return (
     <NavStyled className="p-3" collapseOnSelect expand="lg" variant="dark">
       <Container>
@@ -22,17 +29,17 @@ export const NavBar = () => {
           <Nav className="gap-2">
             <Nav.Item>
               <Nav.Link className="actived" href="#">
-                Inicio
+                {language === "ES" ? "Inicio" : "Home"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#">
-                Panela
+                {language === "ES" ? "Panela" : "Raw Cane Sugar"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#">
-                Sustentabilidad
+                {language === "ES" ? "Sostenibilidad" : "Sustainability"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -47,23 +54,27 @@ export const NavBar = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#">
-                Sobre nosotros
+                {language === "ES" ? "Sobre nosotros" : "About Us"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#">
-                Contacto
+                {language === "ES" ? "Contacto" : "Contact"}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <button>
-                <Nav.Link href="#">¡Cotizar ahora!</Nav.Link>
+                <Nav.Link href="#">{language === "ES" ? "¡Cotizar ahora!" : "Quote now!"}</Nav.Link>
               </button>
             </Nav.Item>
-            <NavDropdown title="ES">
-              <NavDropdown.Item>
-                En
-              </NavDropdown.Item>
+            <NavDropdown title={language}>
+              {language === "ES"
+                ? (<NavDropdown.Item onClick={(e) => changeLanguage(e.target.textContent)}>
+                  EN
+                </NavDropdown.Item>)
+                : (<NavDropdown.Item onClick={(e) => changeLanguage(e.target.textContent)}>
+                  ES
+                </NavDropdown.Item>)}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
